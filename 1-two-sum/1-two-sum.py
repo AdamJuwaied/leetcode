@@ -1,5 +1,5 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for i in range(len(nums)):
-            if ((target - nums[i]) in nums and nums.index(target - nums[i]) != i):
-                return (i, nums.index(target - nums[i]))
+        for x, n in enumerate(nums):
+            if target - n in nums and x != nums.index(target - n):
+                return x, nums.index(target - n)
